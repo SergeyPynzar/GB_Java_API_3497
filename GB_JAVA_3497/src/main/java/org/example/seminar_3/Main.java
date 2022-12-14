@@ -1,15 +1,13 @@
 package org.example.seminar_3;
 
-import org.json.JSONArray;
-
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 //        equals();
 //        arrayList();
-//        listOfPlanets();
-        instanceOfString();
+        listOfPlanets();
+//        instanceOfString();
     }
 
     /**
@@ -42,8 +40,7 @@ public class Main {
         List<Integer> array = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
             Random random = new Random();
-//            random.ints(1, 10);
-            int val = random.nextInt(10);
+            int val = random.nextInt(-10, 10);
             array.add(val);
         }
 
@@ -77,7 +74,7 @@ public class Main {
 
         while (list.hasNext()) {
             String next = list.next();
-            if(old.equals(next)) {
+            if (old.equals(next)) {
                 list.remove();
             }
             old = next;
@@ -113,7 +110,7 @@ public class Main {
         array.add("Work!");
 
         for (int i = 0; i < array.size(); ) {
-            if(array.get(i) instanceof Integer) {
+            if (array.get(i) instanceof Integer) {
                 array.remove(i);
             } else {
                 i++;
