@@ -7,6 +7,7 @@ public class Main {
 //        splitString();
         int[] arr = {1,4,3,5,6,7};
         addStackArray(arr);
+        System.out.println("\n");
         addQueueArray(arr);
     }
 
@@ -63,17 +64,27 @@ public class Main {
     private static void addStackArray(int[] array) {
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
             stack.push(array[i]);
         }
-        System.out.println(stack);
+
+        System.out.println("\n");
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(stack.pop());
+        }
     }
 
     private static void addQueueArray(int[] array) {
         Deque<Integer> queue = new ArrayDeque<>();
         for (int i = 0; i < array.length; i++) {
-            queue.push(array[i]);
+            queue.add(array[i]);
+            System.out.println(array[i]);
         }
-        System.out.println(queue);
+        System.out.println("\n");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(queue.pop());
+        }
     }
 
     /**
